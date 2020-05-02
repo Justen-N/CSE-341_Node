@@ -6,7 +6,7 @@ const requestHandler = (req,res)=>{
 if (url === '/'){
     res.write('<html>');
     res.write('<head><title>Enter Message</title></head>');
-    res.write('<body><h1>Hello there!</h1><form action="/create-user" method="POST"><input type="text"><button type="submit">Create User</button></form></body>');
+    res.write('<body><h1>Hello there!</h1><form action="/informal-header" method="POST"><input type="text"><input type="text"><button type="submit">Name and Date</button></form></body>');
     res.write("</html>");
     return res.end();
  }
@@ -15,6 +15,7 @@ if (url === '/'){
     res.write('<head><title>Enter Message</title></head>');
     res.write('<body><ul><li>Peter</li><li>James</li><li>John</li></ul></body>');
     res.write("</html>");
+    return res.end();
  }
  if (url === '/create-user'&& method === 'POST'){
      const body = [];
@@ -29,7 +30,7 @@ if (url === '/'){
         });
         res.statusCode = 302;
         res.setHeader ('Location', '/');
-        res.end();
+        return res.end();
  }
 
 }

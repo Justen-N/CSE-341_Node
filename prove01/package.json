@@ -1,13 +1,13 @@
 {
-  "name": "section03",
+  "name": "prove01",
   "version": "1.0.0",
-  "description": "tutorial",
+  "description": "First Prove assignment",
   "main": "app.js",
   "scripts": {
-    "test": "test",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "author": "",
+  "author": "Justen Neeley",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
