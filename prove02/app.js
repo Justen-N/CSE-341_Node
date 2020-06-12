@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const books = [];
 app.set('bookArray', books);
 app.set('view engine', 'ejs');
-app.use(bodyParser({
+app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(express.static(path.join(__dirname, 'public')));
